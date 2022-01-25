@@ -166,14 +166,18 @@
 
     <div class="login-actions-container">
       <div class="form__field form__field--remember-me">
-        <label class="label label--remember-me" for="login__remember-me">
-          <input id="login__remember-me" type="checkbox">
+        <label class="label label--remember-me" for="remember_me">
+          <input id="remember_me" type="checkbox" name="remember">
           <span class="checkmark"></span>
           <span class="remember-me-text">Remember me</span>
         </label>
       </div>
 
-      <a class="forgot-password" href="#">Forgot Password?</a>
+      @if (Route::has('password.request'))
+      <a class="forgot-password" href="{{ route('password.request') }}">
+        {{ __('Forgot your password?') }}
+    </a>
+      @endif
 
       <div class="form__field form__field--submit">
         <input type="submit" value="log in">
