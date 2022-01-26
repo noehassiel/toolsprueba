@@ -5,8 +5,14 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <title>Login page</title>
-  <link rel="stylesheet" href="./build/css/index.css">
   <link rel="stylesheet" href="{{ asset('css/log.css') }}">
+  <style>
+      body{
+        background-image: url("{{ asset('img/canongrid.png') }}");
+        background-size: cover;
+        background-position: 50% 50%
+      }
+  </style>
 </head>
 
 <body>

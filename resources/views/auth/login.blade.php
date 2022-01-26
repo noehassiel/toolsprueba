@@ -122,6 +122,12 @@
     </svg>
   </div>
 
+  @if (session('status'))
+            <div class="mb-4 font-medium text-sm text-green-600">
+                {{ session('status') }}
+            </div>
+        @endif
+
   <form method="POST" class="form login" action="{{ route('login') }}">
     @csrf
     <div class="form__field form__field--email">
